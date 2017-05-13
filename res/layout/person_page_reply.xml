@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_reply"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_press" 
+    android:orientation="vertical"
+    android:clickable="true"
+    >
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@drawable/line" />
+    
+    <RelativeLayout 
+       android:id="@+id/rl_reply"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/common_margin"
+       android:layout_marginBottom="@dimen/common_margin">
+       <TextView
+          android:id="@+id/tv_reply"
+          android:layout_width="@dimen/person_page_placeholder_text_width"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginLeft="@dimen/large_margin"
+          android:textColor="@color/black_gray"
+          android:textSize="@dimen/middle_font_size" />
+        
+       <TextView
+          android:id="@+id/tv_enter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:layout_marginRight="@dimen/common_margin"
+          android:text="@string/fa_angle_right"
+          android:textColor="@color/gray"
+          android:textSize="@dimen/large_font_size" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

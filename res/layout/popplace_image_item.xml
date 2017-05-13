@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_pop_while"
+     >
+    
+    
+    <TextView 
+        android:id="@+id/tv_text"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_spacing"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/middle_font_size"
+        android:gravity="center"
+        android:text="是这里吗？"/>
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_below="@+id/tv_text"
+        android:background="@drawable/buttom_pop_gray"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:id="@+id/bt_ok"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="是"
+            android:clickable="true"
+            android:paddingTop="@dimen/small_spacing"
+            android:paddingBottom="@dimen/small_spacing"
+            android:background="@drawable/buttomleft_pop_while"
+            android:textSize="@dimen/middle_font_size"
+            android:layout_marginTop="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:textColor="@color/mainThemeColor"/>
+        
+        <TextView 
+            android:id="@+id/bt_change"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/small_spacing"
+            android:paddingBottom="@dimen/small_spacing"
+            android:background="@drawable/buttomright_pop_while"
+            android:textSize="@dimen/middle_font_size"
+            android:layout_marginTop="0.5dp"
+            android:text="修改"
+            android:clickable="true"
+            android:textColor="@color/mainThemeColor"/>
+        
+    </LinearLayout>
+
+ <!--    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_text"
+        android:layout_marginLeft="14dp"
+        android:src="@drawable/triangle" /> -->
+
+</RelativeLayout>

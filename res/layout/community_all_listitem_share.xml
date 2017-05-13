@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/activity_line"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x_large_margin"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/xx_large_margin"
+            android:layout_marginBottom="@dimen/xx_large_margin"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="1.2"
+            android:textSize="@dimen/common_font_size" />
+
+        <Button
+            android:id="@+id/setbtn"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/setting_btnbg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_font_size"
+            android:text="马上邀请" />
+    </LinearLayout>
+    <include
+        layout="@layout/activity_line"
+        />
+    <include layout="@layout/activity_driver" />
+</LinearLayout>

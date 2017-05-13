@@ -1,0 +1,9 @@
+<mybaby.ui.widget.CircleImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/circle_image"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+app:civ_border_width="1dp"
+    android:src="@drawable/nocolor"
+app:civ_border_color="@color/white"/>

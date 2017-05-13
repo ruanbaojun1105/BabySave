@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="gone"
+    android:alpha="0.8"
+    android:layout_width="match_parent"
+    android:id="@+id/touch_bar_edit"
+    android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/touch_text"
+            android:background="@color/alpha_00"
+            android:textColor="@color/tribe_touch_color"/>
+</LinearLayout>

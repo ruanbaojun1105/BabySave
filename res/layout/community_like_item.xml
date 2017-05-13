@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.9"
+    android:orientation="horizontal"
+    android:id="@+id/like_itme"
+    >
+
+    <LinearLayout
+        android:id="@+id/lin_like_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/report_text"
+        android:layout_alignParentTop="true">
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_share"
+            android:textColor="@color/gray_1"
+            android:text="{fa-share-alt} 分享"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/likeitem_font_size"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_like"
+            android:textColor="@color/gray_1"
+            android:text="{fa-code} 点赞"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/likeitem_font_size"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_replay"
+            android:textSize="@dimen/likeitem_font_size"
+            android:gravity="bottom"
+            android:textColor="@color/gray_1"
+            android:text="{fa-code} 评论"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="举报"
+        android:id="@+id/report_text"
+        android:minWidth="50dp"
+        android:paddingTop="@dimen/padding_width_small"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/likeitem_font_size"
+        android:textColor="@color/gray_1"
+        android:gravity="center_vertical"
+        />
+
+
+</RelativeLayout>

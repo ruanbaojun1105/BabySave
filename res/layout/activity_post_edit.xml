@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/post_scroll"
+    android:background="@color/bg_gray" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/post_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="@string/write_something"
+        android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+        android:lines="5"
+        android:maxLength="@integer/text_maxlength"
+        android:padding="@dimen/small_spacing"
+        android:scrollbars="none"
+        android:textSize="@dimen/middle_font_size" />
+    
+
+   <FrameLayout
+        android:id="@+id/mediaList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+    
+        
+    <TextView
+            android:id="@+id/addPictureButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/fa_picture_o"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/xx_large_font_size" />
+    </FrameLayout>
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+
+    <RelativeLayout
+        android:id="@+id/showplace"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/item_press"
+        android:padding="@dimen/small_spacing" >
+
+        <TextView
+            android:id="@+id/map_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:text="@string/fa_map_marker"
+            android:textColor="@color/mainThemeColor"
+            android:textSize="@dimen/large_font_size" />
+
+        <TextView
+            android:id="@+id/placename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_enter_place"
+            android:layout_toRightOf="@+id/map_marker"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_spacing"
+            android:singleLine="true"
+            android:text="你在哪儿？"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/tv_enter_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:text="@string/fa_angle_right"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/large_font_size" />
+        
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="@dimen/progressbar_width"
+            android:layout_height="@dimen/progressbar_height"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/frame_loading"
+            android:indeterminateDuration="1800" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:background="@color/bg_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+
+    
+
+    <RelativeLayout
+        android:id="@+id/rl_privacyType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_press"
+        android:clickable="true"
+        android:padding="@dimen/small_spacing" >
+
+        <TextView
+            android:id="@+id/privacyTypeIcon"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:text="@string/fa_globe"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/privacyTypeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_enter_privacyType"
+            android:layout_toRightOf="@+id/privacyTypeIcon"
+            android:paddingLeft="@dimen/small_spacing"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/tv_enter_privacyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:text="@string/fa_angle_right"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/large_font_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_tags"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_press"
+        android:clickable="true"
+        android:padding="@dimen/small_spacing" >
+
+        <TextView
+            android:id="@+id/tagsIcon"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:text="@string/fa_tags"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_enter_tags"
+            android:layout_toRightOf="@+id/tagsIcon"
+            android:paddingLeft="@dimen/small_spacing"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/tv_enter_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:text="@string/fa_angle_right"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/large_font_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_pubDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_press"
+        android:clickable="true"
+        android:padding="@dimen/small_spacing" >
+
+        <TextView
+            android:id="@+id/pubDateIcon"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:text="@string/fa_calendar"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/pubDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_enter_pubDate"
+            android:layout_toRightOf="@+id/pubDateIcon"
+            android:paddingLeft="@dimen/small_spacing"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/tv_enter_pubDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:text="@string/fa_angle_right"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/large_font_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginBottom="40dp"
+        android:background="@color/gray_line" />
+
+</LinearLayout>
+</ScrollView>

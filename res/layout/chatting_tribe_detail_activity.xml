@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:weightSum="1">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/large_margin"
+        android:background="@drawable/line" />
+
+        <RelativeLayout
+            android:id="@+id/TribeMember"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lin_height"
+            android:background="@drawable/item_press"
+            android:clickable="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:layout_marginLeft="@dimen/padding_width"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/TribeMember"
+                android:textSize="@dimen/middle_font_size" />
+
+            <TextView
+                android:id="@+id/member_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_enter"
+                android:text="1人"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/tv_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="@string/fa_angle_right"
+                android:layout_marginRight="@dimen/padding_width"
+                android:textSize="@dimen/large_font_size"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+    <include
+        layout="@layout/activity_line"
+        />
+    <RelativeLayout
+            android:id="@+id/Notification"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lin_height"
+            android:background="@drawable/item_press"
+            android:clickable="true">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:layout_marginLeft="@dimen/padding_width"
+                android:text="@string/Notification"
+                android:textSize="@dimen/middle_font_size" />
+
+        <mybaby.ui.widget.CheckSwitchButton
+            android:id="@+id/chatting_notification"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:checked="true"
+            android:layout_marginRight="@dimen/padding_width"
+            />
+    </RelativeLayout>
+    <include layout="@layout/activity_line"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/large_margin"
+        android:background="@drawable/line" />
+    <RelativeLayout
+        android:id="@+id/exitFromTribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_press"
+        android:clickable="true"
+        android:layout_weight="0.04">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textColor="@color/mainThemeColor"
+            android:text="@string/exitFromTribe"
+            android:textSize="@dimen/middle_font_size" />
+    </RelativeLayout>
+    <include layout="@layout/activity_line"/>
+</LinearLayout>

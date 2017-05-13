@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_pop_while"
+     >
+    
+    
+    <TextView 
+        android:id="@+id/tv_text"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_spacing"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/middle_font_size"
+        android:text="设置了地点的记录是公开的，清除地点后才能修改"
+        />
+
+    
+
+</RelativeLayout>

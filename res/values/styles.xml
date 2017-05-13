@@ -1,0 +1,170 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppCompatNotionBarTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <!-- customize the color palette -->
+        <!--边界颜色，toolbar背景色-->
+        <item name="colorPrimary">@color/primary</item>
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!--状态栏背景-->
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="android:actionBarSize">@dimen/toolbar_height</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="MainColorTheme">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_orangeactionbar</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Orangeactionbar</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Orangeactionbar</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Orangeactionbar</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Orangeactionbar</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Orangeactionbar</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_orangeactionbar</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_orangeactionbar</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Orangeactionbar</item>
+
+        <!--<item name="android:windowIsTranslucent">true</item>--><!--滑动关闭窗口必须标签-->
+        <!-- 动画 暂不加 -->
+        <!--
+        <item name="android:windowAnimationStyle">@style/ActivityInOutAnimation</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        -->
+
+        <!--<item name="android:windowActionBarOverlay">true</item>-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 窗体背景色 -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- 照片选择器左边的关闭按钮用到 -->
+        <item name="android:actionModeCloseDrawable">@drawable/ic_action_cancel</item>
+        <!--<item name="android:homeAsUpIndicator">@drawable/ic_action_previous_item</item>--> <!-- 返回icon -->
+        <item name="android:actionBarSize">@dimen/toolbar_height</item>
+    </style>
+
+    <style name="Header.TitleText" parent="android:TextAppearance.Holo">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:shadowColor">#8000</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+    </style>
+    <style name="ProgressBarBig">
+        <item name="android:indeterminateDrawable">@drawable/progress_big</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxWidth">48dip</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">3500</item>
+    </style>
+
+
+    <style name="inoutformbottom" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/anim_entry_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_leave_from_bottom</item>
+    </style>
+
+
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+    <item name="android:maxHeight">50dip</item>
+    <item name="android:minHeight">5dip</item>
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+    <item name="android:progressDrawable">@drawable/progress_backround</item>
+</style>
+    <style name="AnimationPlacepop">
+
+        <!-- PopupWindow下上弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/in_placepop</item>
+        <item name="android:windowExitAnimation">@anim/out_placepop</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/menushow</item>
+        <item name="android:windowExitAnimation">@anim/menuhide</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 Dialog本身清晰，Activity界面内容模糊 -->
+    </style>
+
+    <style name="guide_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/nocolor</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 窗口进入和退出动画都有 -->
+    <style name="ActivityInOutAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_left</item>
+    </style>
+
+    <style name="ImageInOutAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_imageshow</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_imagehide</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_imagehide</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_imageshow</item>
+    </style>
+    <style name="NormalTheme" parent="AppTheme">
+
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_orangeactionbar</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Orangeactionbar</item>
+        <!--<item name="android:windowAnimationStyle">@style/ImageInOutAnimation</item>-->
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 去除阴影 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 窗体背景色 -->
+        <!-- 照片选择器左边的关闭按钮用到 -->
+        <item name="android:actionModeCloseDrawable">@drawable/ic_action_cancel</item>
+    </style>
+    
+    <style name="mypopwindow_anim_style"> <!-- 编辑页面的POP动画  普通的 -->
+  <item name="android:windowEnterAnimation">@anim/popshow_anim</item>      
+   <item name="android:windowExitAnimation">@anim/pophidden_anim</item>       
+ </style>
+ 
+    <style name="mypopwindow_follow_anim_style"> <!-- 编辑页面的POP动画  普通的 -->
+  <item name="android:windowEnterAnimation">@anim/popshow_follow_anim</item>      
+   <item name="android:windowExitAnimation">@anim/pophidden_follow_anim</item>       
+ </style>
+ 
+    <style name="suredownpopwindow_anim_style"><!-- 编辑页面的POP动画 显示按钮的特殊POP -->
+  <item name="android:windowEnterAnimation">@anim/suredown_popshow_anim</item>        
+   <item name="android:windowExitAnimation">@anim/suredown_pophidden_anim</item>       
+ </style>
+ 
+    <style name="sureuppopwindow_anim_style"><!-- 编辑页面的POP动画 显示按钮的特殊POP -->
+  <item name="android:windowEnterAnimation">@anim/sureup_popshow_anim</item>       
+   <item name="android:windowExitAnimation">@anim/sureup_pophidden_anim</item>       
+ </style>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center" 
+    android:background="@drawable/btn_rect_whitebg"
+    >
+
+    <Button
+        android:id="@+id/share"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="分享" 
+        android:layout_margin="3dp"
+        android:background="@drawable/btn_bg"/>
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_1"
+        />
+    <Button
+        android:id="@+id/dislike"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="不感兴趣" 
+        android:layout_margin="3dp"
+        android:background="@drawable/btn_bg"/>
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_1"
+        />
+    <Button
+        android:id="@+id/report"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="举报"
+        android:layout_margin="3dp"
+        android:background="@drawable/btn_bg" />
+<View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_1"
+        />
+    <Button
+        android:id="@+id/delect"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="删除" 
+        android:layout_margin="3dp"
+        android:background="@drawable/btn_bg"/>
+    
+     
+
+</LinearLayout>

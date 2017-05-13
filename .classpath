@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="libs/Android_2DMapApi_V2.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/Android_Map_V2.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/android-xml-json.jar"/>
+	<classpathentry kind="lib" path="libs/com.umeng.message.lib_v2.4.1.jar"/>
+	<classpathentry kind="lib" path="libs/eventbus.jar"/>
+	<classpathentry kind="lib" path="libs/httpmime-4.1.3.jar"/>
+	<classpathentry kind="lib" path="libs/MapApiLocation_1.3.3.jar"/>
+	<classpathentry kind="lib" path="libs/MapApiServices.jar"/>
+	<classpathentry kind="lib" path="libs/metadata-extractor-2.7.0.jar"/>
+	<classpathentry kind="lib" path="libs/SocialSDK_QQZone_1.jar"/>
+	<classpathentry kind="lib" path="libs/SocialSDK_QQZone_2.jar"/>
+	<classpathentry kind="lib" path="libs/SocialSDK_QQZone_3.jar"/>
+	<classpathentry kind="lib" path="libs/SocialSDK_sms.jar"/>
+	<classpathentry kind="lib" path="libs/SocialSDK_WeiXin_1.jar"/>
+	<classpathentry kind="lib" path="libs/SocialSDK_WeiXin_2.jar"/>
+	<classpathentry kind="lib" path="libs/umeng_social_sdk.jar"/>
+	<classpathentry kind="lib" path="libs/umeng-analytics-v5.5.3.jar"/>
+	<classpathentry kind="lib" path="libs/umeng-update-v2.6.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/universal-image-loader-1.9.3-with-sources.jar"/>
+	<classpathentry kind="lib" path="libs/xmpcore-5.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/xutil3.0.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

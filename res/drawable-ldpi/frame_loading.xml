@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_01"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_02"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_03"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_04"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_05"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_06"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_07"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_08"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_09"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_10"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_11"
+            android:gravity="left" />
+    </item>
+    <item android:duration="145">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_12"
+            android:gravity="left" />
+    </item>
+    <!--<item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_1"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_2"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_3"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_4"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_5"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_6"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_7"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_8"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_9"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_10"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_11"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_12"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_13"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_14"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_15"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_16"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_17"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_18"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_19"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_20"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_21"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_22"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_23"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_24"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_25"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_26"
+            android:gravity="left" />
+    </item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_27"
+            android:gravity="left" />
+    </item><item android:duration="45">
+    <clip
+        android:clipOrientation="horizontal"
+        android:drawable="@drawable/pull_refresh_28"
+        android:gravity="left" />
+</item><item android:duration="45">
+    <clip
+        android:clipOrientation="horizontal"
+        android:drawable="@drawable/pull_refresh_29"
+        android:gravity="left" />
+</item>
+    <item android:duration="45">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/pull_refresh_30"
+            android:gravity="left" />
+    </item>-->
+
+
+
+</animation-list>

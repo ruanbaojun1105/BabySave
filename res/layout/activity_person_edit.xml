@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/community_driver_gray"
+    android:orientation="vertical" >
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <requestFocus />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitEnd"
+            />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/xxxxx_large_spacing"
+            android:paddingLeft="@dimen/xxxxx_large_spacing"
+            android:paddingRight="@dimen/xxxxx_large_spacing"
+            android:paddingBottom="@dimen/x_large_spacing"
+            android:layout_alignParentTop="true">
+
+            <FrameLayout
+                android:id="@+id/avatar_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/birthday_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avatar_container"
+                android:layout_marginTop="@dimen/xx_large_spacing"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/icon_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_calendar"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <TextView
+                    android:id="@+id/txt_birthday"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:singleLine="true"
+                    android:text="@string/birthday_due_date"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/middle_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/birthday_container_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/birthday_container"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/light_gray"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/name_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/birthday_container"
+                android:layout_marginTop="@dimen/large_spacing"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/icon_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_smile_o"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:textColorHint="@color/light_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/name_container_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/name_container"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/light_gray"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/person_type_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_container"
+                android:layout_marginTop="@dimen/large_spacing"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/icon_person_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_user"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:text="@string/i_am"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <TextView
+                    android:id="@+id/person_type_mom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:text="@string/mom"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_font_size" />
+
+                <TextView
+                    android:id="@+id/person_type_dad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:text="@string/dad"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/person_type_container_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/person_type_container"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/light_gray"
+                android:visibility="gone"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/baby_type_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_container"
+                android:layout_marginTop="@dimen/large_spacing"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/icon_baby_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_user"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <TextView
+                    android:id="@+id/baby_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:text="宝宝性别:"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <TextView
+                    android:id="@+id/baby_type_gril"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:text="女"
+                    android:minWidth="15dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_font_size" />
+
+                <TextView
+                    android:id="@+id/baby_type_boy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_spacing"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:minWidth="15dp"
+                    android:text="男"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/baby_type_container_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/baby_type_container"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/light_gray"
+                android:visibility="visible"
+                android:orientation="horizontal" />
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/baby_type_container_line"
+                android:layout_marginTop="@dimen/large_spacing"
+                android:text="@android:string/ok"
+                android:background="@drawable/btn_sign_style"
+                android:textSize="@dimen/common_font_size"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_ipc"
+                android:textSize="@dimen/small_font_size"
+                android:layout_below="@+id/btn_ok"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp" />
+
+            <Button
+                android:id="@+id/sign_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:text="有账号？直接登录>>"
+                android:textSize="@dimen/common_font_size"
+                android:textColor="@color/mainThemeColor"
+                android:textColorHighlight="@color/mainThemeColor"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

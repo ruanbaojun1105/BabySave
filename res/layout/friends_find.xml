@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_spacing"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/xx_large_spacing"
+        android:paddingRight="@dimen/xx_large_spacing" >
+
+        <LinearLayout
+            android:id="@+id/friend_invite_friends"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/layout_selector_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/small_spacing" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/ic_action_cc_bcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/invite_friends"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/friend_contacts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xx_large_spacing"
+            android:layout_weight="1"
+            android:background="@drawable/layout_selector_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/small_spacing" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/ic_action_add_person" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/contacts"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/friend_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xx_large_spacing"
+            android:layout_weight="1"
+            android:background="@drawable/layout_selector_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/small_spacing" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/ic_action_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/find_friends"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+<RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/big_image_height"
+     >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/featuredImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_image_height"
+        android:scaleType="centerCrop"
+        app:riv_border_width="1px"
+        app:riv_oval="false"
+        app:riv_border_color="@color/bigimage_color"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font_size"
+        android:background="@color/transparent_alpha"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="5dp"
+        />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/activity_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:id="@+id/line_parenting"
+        android:layout_marginTop="@dimen/small_spacing"
+   		android:layout_marginBottom="@dimen/small_spacing"
+            />
+
+  </LinearLayout>

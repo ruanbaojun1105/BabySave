@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#f2f2f2</color>
+    <color name="primaryDark">#303030</color>
+    <color name="accent">#CCC</color>
+    <color name="accentLight">#f2f2f2</color>
+
+    <color name="tabbar_color">#423b3f</color>
+    <!-- Default colors -->
+    <color name="home_top_bar_bg">#ff839d</color>
+    <color name="cyan">#ffbbd1</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="actionbar_dark_grey">#303030</color>
+    <color name="actionbar_selected">#262626</color>
+    <color name="bg_gray">#f2f2f2</color>
+    <color name="light_gray">#CCC</color>
+    <color name="read_gray">#DDDDDD</color>
+    <color name="little_gray">#f8f8f8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="mainThemeColor">#f56994</color>
+    <color name="oranges">#ff8800</color>
+    <color name="red">#FF4500</color>
+    <color name="link_text_blue">#576b95</color>
+    <color name="nocolo">#00000000</color>
+    <color name="Shallowgray">#f2f2f2</color>
+    <color name="lucensy">#00000001</color>
+    <color name="translucency">#e0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_alpha">#77000000</color>
+    <color name="light_orange">#fcb75c</color>
+    <color name="alpha_00">#00000000</color>
+    <color name="gray2">#808080</color>
+    <color name="desktop">#4e4e4e</color>
+    <color name="trans">#50000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="text_gray">#4F4F4F</color>
+    <color name="green">#00FF00</color>
+    <color name="btn_green">#5CB85C</color>
+    <color name="gold">#b89766</color>
+    <color name="darker_gray">#F0FFFF</color>
+    <color name="azure">#FFFACD</color>
+    <color name="bg_page">#ffebebeb</color>
+    <color name="gray">#808080</color>
+    <color	name="blue">#1e78c8</color>
+    <color	name="blue_light">#1E98FF</color>
+    <color name="gray_4">#D3D3D3</color>
+    <color name="button_gray">#DFDCD8</color>
+    <color name="black_gray">#353535</color>
+    <color name="gray_line">#eaeaea</color>
+    <color name="community_content_gray">#353535</color>
+    <color name="orange_light">#FFA500</color>
+    <color name="white_yellow">#FFF7B4</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="gray_chatting">#EEEEEE</color>
+    <color name="community_driver_gray">#f2f2f2</color>
+    <color name="vpi__background_holo_light">@color/gray</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark</color>
+
+    <color name="actionbar_bg">#FFFFFF</color>
+    <color name="bg_floder_press">#bdbdbd</color>
+
+</resources>

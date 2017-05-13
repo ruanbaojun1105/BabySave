@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/place_rl"
+    >
+
+        <TextView
+            android:id="@+id/place_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/placename"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/placename"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+        	android:textSize="@dimen/common_font_size"
+            android:text="@string/fa_map_marker"
+            android:textColor="@color/gray_1" />
+
+        <TextView
+            android:id="@+id/placename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/place_pica"
+            android:layout_toRightOf="@+id/place_pic"
+            android:gravity="left"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/common_font_size" />
+
+        <TextView
+            android:id="@+id/place_pica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:textSize="@dimen/middle_font_size"
+            android:textColor="@color/gray_1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+             />
+
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bg_gray"
+	android:id="@+id/more_scroll"
+	android:scrollbars="none">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<include layout="@layout/activity_driver_home"/>
+		<include layout="@layout/activity_line"/>
+		<RelativeLayout
+			android:id="@+id/rl_setting_push"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/lin_height"
+			android:gravity="center"
+			android:background="@drawable/item_press"
+			android:clickable="true" >
+
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/small_margin"
+				android:layout_marginLeft="@dimen/padding_width"
+				android:layout_marginTop="@dimen/small_margin"
+				android:text="@string/morefragment_push"
+				android:textSize="@dimen/middle_font_size"
+				android:includeFontPadding="false"
+				android:layout_centerVertical="true"
+				/>
+
+			<TextView
+				android:id="@+id/tv_enter_push"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fa_angle_right"
+				android:textColor="@color/gray"
+				android:textSize="@dimen/middle_font_size"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentEnd="true"
+				android:layout_marginRight="@dimen/padding_width"
+				/>
+
+		</RelativeLayout>
+
+		<include layout="@layout/activity_line"/>
+		<include layout="@layout/activity_driver_home"/>
+		<include layout="@layout/activity_line"/>
+		<RelativeLayout
+			android:id="@+id/rl_setting_help"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/lin_height"
+			android:gravity="center"
+			android:background="@drawable/item_press"
+			android:clickable="true" >
+
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/small_margin"
+				android:layout_marginLeft="@dimen/padding_width"
+				android:layout_marginTop="@dimen/small_margin"
+				android:text="帮助"
+				android:textSize="@dimen/middle_font_size"
+				android:includeFontPadding="false"
+				android:layout_centerVertical="true"
+				/>
+
+			<TextView
+				android:id="@+id/tv_enter_help"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
+				android:text="@string/fa_angle_right"
+				android:textColor="@color/gray"
+				android:textSize="@dimen/middle_font_size"
+				android:layout_marginRight="@dimen/padding_width"
+				android:layout_centerVertical="true"
+				/>
+
+		</RelativeLayout>
+		<include layout="@layout/activity_line"/>
+		<RelativeLayout
+			android:id="@+id/rl_setting_feedback"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/lin_height"
+			android:gravity="center"
+			android:background="@drawable/item_press"
+			android:clickable="true" >
+
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/small_margin"
+				android:layout_marginLeft="@dimen/padding_width"
+				android:layout_marginTop="@dimen/small_margin"
+				android:text="反馈"
+				android:textSize="@dimen/middle_font_size"
+				android:includeFontPadding="false"
+				android:layout_centerVertical="true"
+				/>
+
+			<TextView
+				android:id="@+id/tv_enter_feedback"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
+				android:text="@string/fa_angle_right"
+				android:layout_marginRight="@dimen/padding_width"
+				android:textColor="@color/gray"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/middle_font_size" />
+
+		</RelativeLayout>
+		<include layout="@layout/activity_line"/>
+		<include layout="@layout/activity_driver_home"/>
+		<include layout="@layout/activity_line"/>
+		<RelativeLayout
+			android:id="@+id/rl_setting_share"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/lin_height"
+			android:gravity="center"
+			android:background="@drawable/item_press"
+			android:clickable="true" >
+
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/small_margin"
+				android:layout_marginLeft="@dimen/padding_width"
+				android:layout_marginTop="@dimen/small_margin"
+				android:text="@string/morefragment_share"
+				android:textSize="@dimen/middle_font_size"
+				android:includeFontPadding="false"
+				android:layout_centerVertical="true"
+				/>
+
+			<TextView
+				android:id="@+id/tv_enter_share"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
+				android:text="@string/fa_angle_right"
+				android:layout_marginRight="@dimen/padding_width"
+				android:textColor="@color/gray"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/middle_font_size" />
+		</RelativeLayout>
+		<include layout="@layout/activity_line"/>
+		<include layout="@layout/activity_driver_home"/>
+		<include layout="@layout/activity_line"/>
+
+		<RelativeLayout
+			android:id="@+id/rl_setting_signup"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/lin_height"
+			android:gravity="center"
+			android:background="@drawable/item_press"
+			android:clickable="true" >
+
+
+			<TextView
+				android:id="@+id/tv_setting_signup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/small_margin"
+				android:layout_marginLeft="@dimen/padding_width"
+				android:layout_marginTop="@dimen/small_margin"
+				android:text="@string/morefragment_signup"
+				android:textSize="@dimen/middle_font_size"
+				android:includeFontPadding="false"
+				android:layout_centerVertical="true"
+				/>
+
+			<TextView
+				android:id="@+id/tv_enter_signup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fa_angle_right"
+				android:layout_marginRight="15dp"
+				android:textColor="@color/gray"
+				android:textSize="@dimen/middle_font_size"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentEnd="true"
+				android:layout_marginEnd="15dp" />
+
+		</RelativeLayout>
+		<include layout="@layout/activity_line"/>
+	</LinearLayout>
+</ScrollView>

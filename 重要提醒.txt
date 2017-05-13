@@ -1,0 +1,32 @@
+﻿ren com.umeng.message.lib_v2.4.1.zip com.umeng.message.lib_v2.4.1.jar
+
+1>各种appkey已经在gradle中随着环境自动配置 无需修改 但是多渠道打包需要将所有渠道加入
+debug下只编译了其中一个 其余的都已注释
+
+2>百川IM的库每次更新需要修改资源文件 替换聊天背景图片
+
+3>友盟的推送库由于与云旺电商库中的类有冲突 选择删除友盟中的重复类可解决
+
+4>友盟中的JNI动态库现在版本已经全部删除，因为电商动态库中也有，如果都存在会有冲突
+
+5>很多action的获取方式不是很好，如果服务端返回的参数有变则会无法执行action，
+最好的方式是用maputils类中方法获得，目前看来action太多，看到在改吧-------此条忽略
+
+6>开启任何界面请尽量统一使用mybaby.ui.community.customclass中的方法，特别是已经都使用此类中的方法开启了的界面，
+如果没有则查看已使用了的地方，不要没理解透其中的逻辑就随意修改
+
+7>混淆文件中还有一些配置，谨慎对待，如果不熟悉，可以不修改
+
+8>每次升级需要修改版本号
+
+9>百川SDK没有添加进SVN，因为修改频繁
+
+10>16-06-17已重新整理svn的目录文件，方便更换电脑直接编译，需要如下配置：
+a
+修改D:\MyBaby\MyBabyAS\gradle\wrapper\gradle-wrapper.properties中的gradle版本号为你本机的gradle版本号.
+b
+修改D:\MyBaby\MyBabyAS\build.gradle文件的编译器版本号配置
+c
+D:\MyBaby\MyBabyAS\local.properties的文件也需修改，一般更换电脑编译器会自动提示修改
+
+11>修改了百川SDK后记得把sdk中界面的主题都修改，去掉actionbar

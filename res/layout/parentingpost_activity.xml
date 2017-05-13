@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include
+        layout="@layout/actionbar_parentwebview"
+        android:id="@+id/toolbar_webview" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/content_page"
+        android:background="@color/community_driver_gray"
+        />
+    <!--<include
+        layout="@layout/parentingpost_webview"
+        />-->
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:id="@+id/mshowpop" >
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/padding_width"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/bt_follow"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/mainThemeColor"
+            android:textSize="@dimen/middle_font_size"
+            android:clickable="true"
+            android:text="+ 关注"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/progressbar_width"
+            android:layout_height="@dimen/progressbar_height"
+            android:indeterminateDrawable="@drawable/frame_loading"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_width"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bt_sendMessage"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/mainThemeColor"
+        android:textSize="@dimen/middle_font_size"
+        android:clickable="true"
+        android:text="发消息"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/bt_jubao"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/middle_font_size"
+        android:clickable="true"
+        android:text="拉黑"
+        android:layout_marginRight="@dimen/padding_width"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

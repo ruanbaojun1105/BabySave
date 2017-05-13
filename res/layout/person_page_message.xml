@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+    <LinearLayout
+        android:id="@+id/ll_person_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_press"
+        android:orientation="horizontal" >
+
+        <mybaby.ui.widget.RoundImageViewByXfermode
+            android:id="@+id/iv_person"
+            android:layout_width="@dimen/person_page_messageholder_avator_width"
+            android:layout_height="@dimen/person_page_messageholder_avator_height"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:src="@drawable/avatar" >
+        </mybaby.ui.widget.RoundImageViewByXfermode>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="@dimen/x_large_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/middle_font_size" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size" />
+
+            <LinearLayout
+                android:id="@+id/follow_and_follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_font_size"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:paddingRight="@dimen/small_spacing"
+                    android:paddingTop="@dimen/small_spacing"
+                    android:paddingBottom="@dimen/small_spacing"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/middle_font_size" />
+
+                <TextView
+                    android:id="@+id/tv_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:paddingLeft="@dimen/small_spacing"
+                    android:paddingRight="@dimen/small_spacing"
+                    android:paddingTop="@dimen/small_spacing"
+                    android:paddingBottom="@dimen/small_spacing"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/middle_font_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_line" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_write"
+        android:icon="@drawable/edit_tag_gray"
+        android:showAsAction="always"
+        android:title="@string/write"/>
+    <item
+        android:id="@+id/menu_cover"
+        android:showAsAction="never"
+        android:title="@string/cover"/>    
+    <item
+        android:id="@+id/menu_setting"
+        android:showAsAction="never"
+        android:title="@string/settings"/> 
+    <item
+        android:id="@+id/menu_delete"
+        android:showAsAction="never"
+        android:title="@string/delete"/>            
+</menu>

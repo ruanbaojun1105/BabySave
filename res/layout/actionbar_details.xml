@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/actionbar_title_holder_image"/>
+
+    <TextView
+        android:id="@+id/follow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:text="@string/follow"
+        android:padding="@dimen/small_spacing"
+        android:textColor="@color/mainThemeColor"
+        android:textSize="@dimen/middle_font_size"  />
+
+    <ProgressBar
+        android:id="@+id/progress_image"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="@dimen/progressbar_width"
+        android:layout_height="@dimen/progressbar_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/small_spacing"
+        android:indeterminateDrawable="@drawable/frame_loading"
+        android:visibility="gone" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_1"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

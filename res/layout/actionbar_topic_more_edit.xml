@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/search_edt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/action_back" />
+
+    <EditText
+        android:id="@+id/search_edt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_back"
+        android:hint="搜索感兴趣的话题"
+        android:padding="6dp"
+        android:lines="1"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:drawableRight="@drawable/umeng_socialize_search_icon"
+        android:imeOptions="actionSearch"
+        />
+    <requestFocus />
+</RelativeLayout>

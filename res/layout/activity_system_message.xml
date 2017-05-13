@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taobao.openimui.tribe.TribeSystemMessageActivity"
+    android:background="@color/bg_gray"
+    >
+    <ListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:divider="@color/bg_gray"
+        android:layout_marginRight="@dimen/aliwx_column_top_margin"
+        android:layout_marginLeft="@dimen/aliwx_column_top_margin"
+        android:scrollbars="none"
+        android:layout_below="@+id/title_self_state"/>
+</RelativeLayout>

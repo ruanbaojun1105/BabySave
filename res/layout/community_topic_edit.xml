@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:scrollbars="none"
+    >
+
+    <RelativeLayout
+        android:id="@+id/scroll_rela"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:id="@+id/topic_category_lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+            <!--<TextView
+                android:id="@+id/topic_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="asdfsdaf"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="@dimen/small_spacing"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/common_font_size"
+                android:visibility="visible"
+                />
+            <include
+                layout="@layout/activity_line"
+                />-->
+            <EditText
+                android:id="@+id/post_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="标题（选填）"
+                android:lines="1"
+                android:maxLength="20"
+                android:padding="@dimen/small_spacing"
+                android:singleLine="true"
+                android:textSize="@dimen/middle_font_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/place_rela"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/mediaList"
+            android:background="@drawable/item_press" >
+
+            <TextView
+                android:id="@+id/place_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/middle_font_size" />
+
+            <TextView
+                android:id="@+id/placename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/place_pic"
+                android:ellipsize="end"
+                android:hint="你在哪儿？"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/middle_font_size" />
+
+            <TextView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/gray"
+                android:text="@string/fa_map_marker"
+                android:textSize="@dimen/middle_font_size" />
+		<include 
+            layout="@layout/activity_line"
+            />
+
+		<ProgressBar
+		    android:id="@+id/loading_place_progressBar"
+		    style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/progressbar_width"
+            android:layout_height="@dimen/progressbar_height"
+		    android:layout_centerVertical="true"
+		    android:layout_centerInParent="true"
+		    android:indeterminateDrawable="@drawable/frame_loading"
+            android:visibility="gone"
+            />
+            
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/mediaList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topic_text_lin"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/addPicture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+            	android:text="@string/fa_picture_o"
+            	android:textColor="@color/light_gray"
+            	android:textSize="@dimen/xx_large_font_size"
+                 />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/topic_text_lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topic_category_lin"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+            <include
+                layout="@layout/activity_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginLeft="@dimen/small_margin"
+                />
+            <EditText
+                android:id="@+id/post_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_title"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/write_something"
+                android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+                android:lines="5"
+                android:maxLength="@integer/text_maxlength"
+                android:padding="@dimen/small_spacing"
+                android:scrollbars="vertical"
+                android:textSize="@dimen/middle_font_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

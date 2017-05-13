@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/community_head_rela"
+    android:orientation="vertical" >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/communitymain_header_bg"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/person_frame" />
+
+    <FrameLayout
+        android:id="@+id/person_frame"
+        android:layout_width="@dimen/morefragment_person_page_image_width"
+        android:layout_height="@dimen/morefragment_person_page_image_height"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/x_large_margin"
+        android:layout_marginBottom="@dimen/x_large_margin"
+        android:src="@drawable/avatar" />
+    <LinearLayout
+        android:id="@+id/head_name_lin"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/person_frame"
+        android:layout_toEndOf="@+id/person_frame"
+        android:layout_alignBottom="@+id/person_rela"
+        android:layout_alignTop="@+id/person_frame">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Textfadfsfsdfa"
+            android:id="@+id/persion_name"
+            android:textSize="@dimen/common_font_size"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLength="@integer/namelength"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/person_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:id="@+id/persion_age"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_font_size"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/person_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignBottom="@+id/person_frame"
+        android:layout_toRightOf="@+id/head_name_lin"
+        android:layout_alignTop="@+id/person_frame"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+        <RelativeLayout
+            android:id="@+id/photo_rela"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_bg_red"
+                android:id="@+id/photo_red"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:text="New"
+                android:layout_marginBottom="-5dp"
+                android:textSize="@dimen/small_font_size"
+                android:layout_above="@+id/image_babyspace"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/white"
+                android:id="@+id/image_babyspace"
+                android:src="@drawable/babyspace_btn_bg"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

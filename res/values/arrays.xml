@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="load_colors">
+        <item>@color/mainThemeColor</item>
+        <item>@color/mainThemeColor</item>
+        <item>@color/mainThemeColor</item>
+        <item>@color/mainThemeColor</item>
+    </integer-array>
+</resources>

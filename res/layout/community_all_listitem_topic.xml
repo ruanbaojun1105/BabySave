@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="260dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/activity_line"
+        />
+
+    <RelativeLayout
+        android:id="@+id/aaa"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+         >
+
+        <ImageView
+            android:id="@+id/item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/categor_rl"
+            android:layout_alignLeft="@+id/categor_rl"
+            android:layout_alignRight="@+id/categor_rl"
+            android:layout_alignTop="@+id/categor_rl"
+            android:scaleType="centerCrop"
+            >
+
+        </ImageView>
+
+
+        <RelativeLayout
+            android:id="@+id/categor_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" 
+            android:layout_alignParentBottom="true"
+             >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/yufangz"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/middle_margin"
+                android:textSize="@dimen/middle_font_size" />
+
+            <TextView
+                android:id="@+id/hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/title"
+                android:ems="10"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/saysay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middle_font_size" />
+
+            <LinearLayout
+                android:id="@+id/addbutton_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint_tv"
+                android:layout_centerHorizontal="true" >
+
+                <LinearLayout
+                    android:id="@+id/sendtopic_lin"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/middle_margin"
+            		android:background="@drawable/setting_btnbg"
+            		android:gravity="center"
+                    >
+                    <com.joanzapata.iconify.widget.IconTextView
+                        android:id="@+id/sendtopic_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:singleLine="true"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/content_font_size"
+                        android:textColor="@color/white"
+                        />
+
+                    </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/share_lin"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/middle_margin"
+            		android:background="@drawable/setting_btn_nonnebg"
+            		android:gravity="center"
+                     >
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/share_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:singleLine="true"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/content_font_size"
+                    android:textColor="@color/btn_green"
+                    android:gravity="center"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+           
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/categor_rl"
+            android:layout_alignLeft="@+id/categor_rl"
+            android:layout_alignRight="@+id/categor_rl"
+            android:layout_alignTop="@+id/categor_rl"
+            android:background="@color/transparent_alpha" />
+
+    </RelativeLayout>
+    <include
+        layout="@layout/activity_line"
+        />
+    <include layout="@layout/activity_driver" />
+</LinearLayout>

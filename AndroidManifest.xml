@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.hibb.mybaby.android"
+    android:versionCode="8"
+    android:versionName="6.4" >
+    <!--android:versionCode="5"
+    android:versionName="6.2.0"-->
+    <!--android:versionCode="6"
+    android:versionName="6.2.1"-->
+
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 往SDCard读取数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 不死服务所需权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 友盟消息推送 （部分权限与之前权限相同之后在行删除） -->
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 【必选】用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 高德地图 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name="mybaby.ui.MyBabyApp"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        >
+        <!-- hardwareAccelerated请不要随意开启硬件加速 -->
+        <!-- android:largeHeap="true" 强制将程序内存增大，但是带来的副作用是加载速度边变慢 -->
+        <!-- landscape为固定横屏,portrait为固定竖屏 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${GAODE_MAP_VALUE}" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY_VALUE}"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="${UMENG_MESSAGE_SECRET_VALUE}"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- QQ分享 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104084483" />
+                <!-- bj 1104772101 lj 1104084483 -->
+                <!-- tencent你的AppId -->
+            </intent-filter>
+        </activity>
+
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <!-- 网络广播 -->
+        <!--
+        <receiver android:name="mybaby.ui.broadcast.NetWorkChangeBroadcastReceiver">
+            <intent-filter> 
+                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> 
+             </intent-filter> 
+        </receiver>
+        -->
+        <receiver
+            android:name="mybaby.notification.PhoneStatReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <service  android:name="mybaby.service.UpdateService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service  android:name="mybaby.service.HostMonitor"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat"
+            />
+        <!-- Main -->
+        <activity
+            android:name="mybaby.ui.main.MyBayMainActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask"
+            android:theme="@style/AppCompatNotionBarTheme"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="mybaby.me.action.SHORTCUT" /> <!-- 自定义的action，通过自定义的action可以跨app调用到activity -->
+                <!--<action android:name="android.intent.action.MAIN" />--><!-- 当程序删除时，快捷方式也会跟着删除 -->
+                <category android:name="android.intent.category.DEFAULT" /> <!-- 必须加上这个，否则下面无法直接使用自定的action -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="mybaby.ui.GuideActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name= "mybaby.ui.LoadResActivity"
+            android:launchMode= "singleTask"
+            android:process= ":mini"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:alwaysRetainTaskState= "false"
+            android:excludeFromRecents= "true"
+            android:screenOrientation= "portrait" />
+        <!-- 启动页 -->
+        <activity
+            android:name="mybaby.ui.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- User activities -->
+        <activity
+            android:name="mybaby.ui.user.SignInUpActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="mybaby.ui.user.PersonEditActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+
+        <!-- Posts activities -->
+        <activity
+            android:name="mybaby.ui.posts.person.PersonTimelineActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="mybaby.ui.posts.edit.EditPostActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="mybaby.ui.posts.gallery.PostGallery"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/NormalTheme"
+            android:launchMode="singleTop"
+            >
+        </activity>
+        <activity
+            android:name="mybaby.ui.posts.edit.LabelActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name="mybaby.ui.posts.home.HomeTimelineActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Other activities -->
+        <activity
+            android:name="mybaby.ui.photopicker.GalleryPickerActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="mybaby.ui.DialogActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" />
+        <!-- community activity -->
+        <activity
+            android:name="mybaby.ui.community.MyFollowTopicCategoryListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            /><!--我关注的话题列表-->
+        <activity
+            android:name="mybaby.ui.community.CommunityMainActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mybaby.ui.community.TopicEditActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="mybaby.ui.user.RegisterActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mybaby.ui.EmptyActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mybaby.ui.community.ImagePageActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/NormalTheme" />
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" -->
+        <activity
+            android:name="mybaby.ui.community.DetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.community.TopicListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mybaby.ui.community.PlaceListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mybaby.ui.community.TopicMoreActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mybaby.ui.community.FriendListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="mybaby.ui.community.TestActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.community.LikeListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <!-- 育儿 -->
+        <activity
+            android:name="mybaby.ui.community.parentingpost.ParentingPostActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.community.parentingpost.ParentingWebViewActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <!--android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"-->
+        <!-- notifications activities -->
+        <!--android:process="me.hibb.mybaby.android.web"-->
+
+        <activity
+            android:name="mybaby.ui.Notification.TribeGroupListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.user.UserFriendListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <!-- more activities -->
+        <activity
+            android:name="mybaby.ui.more.PersonPageActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize" />
+        <activity
+            android:name="mybaby.ui.more.personpage.PersonPlaceActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize" />
+        <activity
+            android:name="mybaby.ui.more.personpage.PersonTopicActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize" />
+        <activity
+            android:name="mybaby.ui.more.personpage.FollowActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.more.personpage.FollowerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.more.MessagePageActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize" />
+        <activity
+            android:name="mybaby.ui.more.PlaceSettingActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="mybaby.ui.more.ShowMapActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="mybaby.ui.community.LikedAndLookedListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="mybaby.ui.more.SettingFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="mybaby.ui.Notification.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:theme="@style/AppCompatNotionBarTheme"
+            />
+        <activity
+            android:name="mybaby.ui.Notification.NotificationCategoryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:theme="@style/AppCompatNotionBarTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            />
+        <activity android:name=".IMActivity.ChattingFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".IMActivity.ChattingTribeDetailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="mybaby.ui.community.TribeSpaceListActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".IMActivity.TribeMembersActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".IMActivity.ChattingTribeFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".IMActivity.TribeSystemMessageActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="mybaby.ui.community.SuitOpenRPCListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="photopickerlib.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme">
+        </activity>
+        <activity
+            android:name="photopickerlib.SelectBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNotionBarTheme">
+        </activity>
+
+        <!-- Services -->
+        <service
+            android:name="mybaby.service.Sync2ServerService"
+            android:label="SyncService" >
+        </service>
+        <service
+            android:name="mybaby.push.AlwayLiveService"
+            android:process=":push" >
+        </service>
+
+        <receiver android:name="mybaby.push.MyUMengPushReceiver" >
+            <intent-filter android:priority="1000" >
+                <!-- 优先级加最高 -->
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听情景切换 -->
+                <action android:name="android.media.RINGER_MODE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+        </receiver>
+        <!-- LocalNotification -->
+        <receiver android:name="mybaby.notification.NewPictureBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.hardware.action.NEW_PICTURE" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/> -->
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 友盟自动更新 -->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="me.hibb.mybaby.android.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="me.hibb.mybaby.android.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="me.hibb.mybaby.android.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <!--IM-->
+        <activity
+            android:name="com.alibaba.mobileim.ui.WxChattingActvity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ChattingDetailStyle_default"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.WxConversationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.chat.MultiImageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            android:theme="@style/Aliwx_ContentOverlay_default"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+
+        <service
+            android:name="com.alibaba.mobileim.appmonitor.tiptool.TooltipService"
+            android:exported="false" />
+        <service
+            android:name="com.alibaba.tcms.service.TCMSService"
+            android:exported="true"
+            android:process=":TcmsService" />
+        <!-- 用于接收从TCMSService发送的命令 -->
+        <service
+            android:name="com.alibaba.tcms.service.ListenerService"
+            android:exported="true" />
+
+        <!-- @消息相关 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.atmessage.AtMsgListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.atmessage.SendAtMessageDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        <activity
+            android:name="com.alibaba.mobileim.kit.chat.SelectTribeMemberActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+    </application>
+
+
+</manifest>

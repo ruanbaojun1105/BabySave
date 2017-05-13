@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/community_head_rela"
+    android:fitsSystemWindows="true"
+    >
+    <!--<RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        custom:pager_animation="Accordion"
+        custom:auto_cycle="true"
+        custom:indicator_visibility="visible"
+        custom:pager_animation_span="1000"
+        android:visibility="gone"
+        android:layout_height="150dp"/>
+        &lt;!&ndash;<com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            style="@style/AndroidImageSlider_Corner_Oval_Orange"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            />&ndash;&gt;
+    </RelativeLayout>-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/communitymain_header_bg"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/person_rela" />
+
+    <RelativeLayout
+        android:id="@+id/person_rela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <FrameLayout
+            android:id="@+id/person_frame"
+            android:layout_width="@dimen/morefragment_person_page_image_width"
+            android:layout_height="@dimen/morefragment_person_page_image_height"
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/avatar" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/person_frame"
+            android:layout_toEndOf="@+id/person_frame">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/persion_name"
+                android:textSize="@dimen/middle_font_size"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/person_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:id="@+id/persion_age"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_font_size"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/photo_rela"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/white"
+        android:id="@+id/babyspace_btn"
+        android:src="@drawable/babyspace_btn_bg"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+        <!--<com.github.siyamed.shapeimageview.BubbleImageView
+            android:id="@+id/newphoto_image1"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/babyspace_btn"
+            android:scaleType="centerCrop"
+            app:siTriangleHeight="5dp"
+            android:src="@drawable/avatar"
+            android:visibility="gone"
+            app:siArrowPosition="right"/>-->
+        <ImageView
+            android:id="@+id/newphoto_image_bg"
+            android:background="@drawable/newphoto"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/babyspace_btn"
+            android:paddingBottom="2dp"
+            android:paddingTop="18dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="2dp"
+            />
+        <ImageView
+            android:id="@+id/newphoto_image"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/mainThemeColor_home_bg"
+            android:layout_alignLeft="@+id/newphoto_image_bg"
+            android:layout_alignStart="@+id/newphoto_image_bg"
+            android:layout_alignTop="@+id/newphoto_image_bg"
+            android:layout_alignBottom="@+id/newphoto_image_bg"
+            android:layout_toLeftOf="@+id/babyspace_btn"
+            android:layout_toStartOf="@+id/babyspace_btn"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

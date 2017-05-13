@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parenting_post_row"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/community_driver_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/parenting_post_lin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_spacing"
+        android:background="@drawable/btn_bg_selector"
+        android:orientation="vertical"
+        android:padding="@dimen/small_spacing" >
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle_font_size" 
+            android:layout_marginTop="4dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            >
+
+            
+			<TextView
+                android:id="@+id/image_sideline"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:background="@drawable/btn_rect_whitebg_parenting"
+                 />
+            <ImageView
+                android:id="@+id/image_post"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/common_spacing"
+                 >
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/post_excerpt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:textColor="@color/gray"
+            android:lineSpacingMultiplier="1.2"
+            android:textSize="@dimen/common_font_size"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:background="@color/gray_line"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读全文"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:id="@+id/readall"
+                android:textSize="@dimen/common_font_size" />
+
+            <TextView
+                android:id="@+id/post_more_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/readall"
+                android:gravity="center"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/common_font_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

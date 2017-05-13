@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.ksoichiro.android.observablescrollview.ObservableWebView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/toolbar_height"
+            android:background="@color/white"
+            />
+        <!--<com.github.ksoichiro.android.observablescrollview.ObservableWebView
+            android:id="@+id/scrollable_staus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/toolbar_height"
+            android:visibility="gone"
+            />-->
+        <ProgressBar
+            android:id="@+id/webview_progess"
+            style="@style/ProgressBar_Mini"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/toolbar_height"
+            />
+
+        <FrameLayout
+            android:id="@+id/dealError"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/toolbar_height"
+            />
+
+        <RelativeLayout
+            android:id="@+id/loading_rela"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/toolbar_height"
+            >
+            <ProgressBar
+                android:id="@+id/delayDisplay_progressBar"
+                android:layout_width="@dimen/progressbar_width"
+                android:layout_height="@dimen/progressbar_height"
+                android:indeterminateDrawable="@drawable/frame_loading"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+            <ProgressBar
+                android:id="@+id/webview_progress_two"
+                android:layout_width="@dimen/progressbar_width"
+                android:layout_height="@dimen/progressbar_height"
+                android:indeterminateDrawable="@drawable/frame_loading"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </FrameLayout>

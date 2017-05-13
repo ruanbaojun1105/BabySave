@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/xx_large_spacing"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_public"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/common_spacing"
+                android:text="公开"
+                android:clickable="true"
+                android:background="@drawable/btn_bg"
+                android:textSize="@dimen/middle_font_size" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/line_height"
+            android:layout_marginLeft="@dimen/middle_margin"
+            android:background="@drawable/line" />
+
+            <TextView
+                android:id="@+id/tv_private"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:background="@drawable/btn_bg"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/common_spacing"
+                android:text="只给自己看"
+                android:textSize="@dimen/middle_font_size" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/line_height"
+            android:layout_marginLeft="@dimen/middle_margin"
+            android:background="@drawable/line" />
+
+            <TextView
+                android:id="@+id/tv_friend"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:background="@drawable/btn_bg"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/common_spacing"
+                android:text="只给好友看"
+                android:textSize="@dimen/middle_font_size" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/line_height"
+            android:background="@drawable/line" />
+    </LinearLayout>
+    
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/small_font_size"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:paddingLeft="@dimen/common_spacing"
+        android:layout_gravity="right"
+        android:text="相互关注的人即为好友"/>
+
+</LinearLayout>

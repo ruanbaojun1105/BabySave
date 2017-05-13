@@ -1,0 +1,127 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    android:background="@color/white"
+         >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:padding="@dimen/padding_width_small"
+    android:background="@drawable/item_press"
+    >
+
+    <mybaby.ui.widget.RoundImageViewByXfermode
+        android:id="@+id/userimage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerCrop"
+         />
+
+    <LinearLayout
+        android:id="@+id/reply_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/userimage"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <mybaby.ui.community.customclass.CustomLinkTextView
+                android:id="@+id/reply_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text"
+                android:layout_alignTop="@+id/text"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:lines="1"
+                android:maxEms="30"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size"
+			 />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/gray_1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="@dimen/small_font_size"
+                android:layout_toRightOf="@+id/reply_username"
+                 />
+
+            <mybaby.ui.community.customclass.CustomLinkTextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text"
+                android:layout_alignTop="@+id/text"
+                android:layout_toRightOf="@+id/text"
+                android:gravity="center"
+                android:lines="1"
+                android:maxEms="30"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size"
+                />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/username"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_font_size"
+                android:gravity="center"
+                 />
+           
+        </RelativeLayout>
+        <mybaby.ui.community.customclass.CustomLinkTextView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginLeft="3dp"
+            android:textSize="@dimen/content_font_size"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/community_content_gray"
+            />
+
+        <TextView
+            android:id="@+id/showreplytag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="回复"
+            android:textColor="@color/mainThemeColor"
+            android:textSize="@dimen/small_font_size"
+             />
+       
+    </LinearLayout>
+
+</RelativeLayout>
+<include
+    layout="@layout/activity_line"
+    android:layout_width="wrap_content"
+    android:layout_height="1px"
+    android:layout_marginRight="@dimen/padding_width_small"
+    android:layout_marginLeft="@dimen/padding_width_small"
+  />
+</LinearLayout>

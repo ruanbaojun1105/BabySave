@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/today_write"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/today_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_left_right_padding"
+            android:text="@string/today"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_font_size" />
+
+        <TextView
+            android:id="@+id/today_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:textColor="@color/gray"
+            android:text="fdadfsad"
+            android:textSize="@dimen/small_font_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/today_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/today_edit_left_margin"
+            android:layout_marginRight="@dimen/xxx_large_spacing"
+            android:background="@drawable/edit_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/write_something"
+            android:paddingLeft="6dp"
+            android:textColor="@color/light_gray"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/today_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/xxxx_large_spacing"
+            android:gravity="center_vertical"
+            android:text="@string/fa_picture_o"
+            android:textColor="@color/light_gray"
+            android:textSize="26dp" />
+    </RelativeLayout>
+
+</LinearLayout>

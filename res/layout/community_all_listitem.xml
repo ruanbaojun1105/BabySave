@@ -1,0 +1,81 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:id="@+id/mainitem"
+        android:background="@color/white"
+        >
+    <include
+        layout="@layout/activity_line"
+        />
+    <LinearLayout
+        android:id="@+id/hotlinear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门"
+            android:paddingLeft="10dp"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            android:textColor="@color/gray2"
+        	android:textSize="@dimen/common_font_size"/>
+
+        <include
+            layout="@layout/activity_line" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+
+        <include layout="@layout/community_all_listitem_title" />
+
+        <RelativeLayout
+            android:id="@+id/item_grayview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+<LinearLayout
+        android:id="@+id/hot_morelinear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    <include
+        layout="@layout/activity_line" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:textColor="@color/mainThemeColor"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+        	android:textSize="@dimen/common_font_size"/>
+       
+    </LinearLayout>
+
+    <include
+        layout="@layout/activity_line"
+        />
+    <include layout="@layout/activity_driver" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_line"
+        android:id="@+id/footer_line"
+        />
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/image_margin_right"
+    android:paddingLeft="@dimen/padding_width_small"
+    android:paddingRight="@dimen/padding_width_small"
+    >
+
+    <TextView
+        android:id="@+id/share_focus"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="-10dp" />
+
+    <include layout="@layout/community_activityitme_head"
+        android:layout_width="match_parent"
+        android:id="@+id/titile_rela"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_width_small"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/titile_rela">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--<mybaby.ui.community.customclass.CustomLinkTextView
+                android:id="@+id/topic_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:background="@drawable/btn_rect_littlegray"
+                android:textColor="@color/gray_community_content_gray"
+                android:textSize="@dimen/common_font_size" />-->
+
+            <mybaby.ui.community.customclass.CustomLinkTextView
+                android:id="@+id/tv_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/padding_width_small"
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/community_content_gray"
+                android:textSize="@dimen/content_font_size" />
+
+            <TextView
+                android:id="@+id/quanwen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全文"
+                android:textSize="@dimen/likeitem_font_size"
+                android:textColor="@color/gray_1"
+                android:visibility="gone" />
+
+            <!--<ViewStub
+                android:id="@+id/images_lin_Stub"
+                android:layout="@layout/image_smallitem"
+                android:layout_marginRight="@dimen/middle_spacing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content"
+                android:layout_marginTop="@dimen/common_spacing"
+                />-->
+            <include
+                layout="@layout/image_smallitem"
+                android:layout_marginRight="@dimen/middle_spacing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content"
+                android:layout_marginTop="@dimen/common_spacing"
+                />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/image_lin"
+                android:layout_below="@+id/image_lin"
+                android:layout_marginRight="@dimen/image_margin_right"
+                android:layout_marginTop="@dimen/common_spacing"
+                layout="@layout/activity_link_item"
+                android:orientation="horizontal" />
+            <include
+                android:id="@id/place_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/image_lin"
+                android:layout_below="@+id/image_lin"
+                android:layout_marginRight="@dimen/image_margin_right"
+                android:layout_marginTop="@dimen/common_spacing"
+                layout="@layout/activity_place_item"
+                />
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_spacing"
+                layout="@layout/activity_comment"
+                />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/community_like_item"
+                android:gravity="center" />
+
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

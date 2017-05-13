@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/item_press"
+     >
+
+    <LinearLayout
+        android:id="@+id/like_lin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/lin"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+
+       
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="10dp" >
+
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/common_font_size"
+            android:textColor="@color/gray"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/activity_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

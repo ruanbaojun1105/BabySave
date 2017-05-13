@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        >
+
+        <TextView
+            android:id="@+id/actionbar_back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/fa_angle_left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_font_size" />
+    <TextView
+        android:id="@+id/actionbar_back_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/badge_bg_red_radiu"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xsmall_font_size"
+        android:textStyle="bold"
+        android:maxWidth="25dp"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_toLeftOf="@+id/line_c" />
+        <mybaby.ui.community.customclass.CustomLinkTextView
+            android:id="@+id/actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/line_c"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize ="marquee"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle_margin" />
+
+        <View
+            android:id="@+id/line_c"
+            android:layout_width="1px"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/actionbar_back"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/middle_margin"
+            android:background="@color/light_gray" 
+            android:alpha="0.5"
+            />
+
+    </RelativeLayout>

@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_timeline_header_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/home_timeline_header_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_gray"
+        android:scaleType="centerCrop" />
+
+    <mybaby.ui.community.customclass.CusHorScrollView
+        android:id="@+id/home_timeline_header_content_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/home_timeline_header_content"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </mybaby.ui.community.customclass.CusHorScrollView>
+
+    <TextView
+        android:id="@+id/home_timeline_header_add_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:paddingBottom="@dimen/small_spacing"
+        android:paddingRight="@dimen/common_spacing"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="@string/fa_chevron_down"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font_size" />
+
+</FrameLayout>

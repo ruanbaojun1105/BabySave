@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray">
+
+
+    <include
+        android:id="@+id/title_self_state"
+        layout="@layout/aliwx_title_self_state" />
+
+    <TextView
+        android:id="@+id/add_tribe_members"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title_self_state"
+        android:paddingLeft="@dimen/aliwx_column_up_unit_margin"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/aliwx_font_first_grade"
+        android:textColor="@color/aliwx_common_text_color"
+        android:background="@color/aliwx_white"
+        android:text="添加群成员" />
+
+    <com.alibaba.mobileim.fundamental.widget.refreshlist.YWPullToRefreshListView
+        android:id="@+id/tribe_members_list"
+        style="@style/aliwx_dividedListStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line1"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000" />
+
+</RelativeLayout>

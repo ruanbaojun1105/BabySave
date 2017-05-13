@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/content_page"
+        android:background="@color/community_driver_gray"
+        />
+    <!--<mybaby.ui.community.parentingpost.util.LoadingView
+        android:id="@+id/loadingView_shop"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:alpha="0.4"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />-->
+
+</RelativeLayout>

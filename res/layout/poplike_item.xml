@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/like_rela"
+    >
+
+    <include layout="@layout/community_like_item"></include>
+    <!--<ImageView
+        android:id="@+id/poplike_btn"
+        android:layout_width="40dp"
+        android:layout_height="21dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/likecount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gray_1"
+        android:textSize="@dimen/small_font_size"
+        android:layout_marginRight="@dimen/common_margin"
+        />
+
+    <TextView
+        android:id="@+id/replycount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/likecount"
+        android:layout_alignTop="@+id/likecount"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/likecount"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gray_1"
+        android:textSize="@dimen/small_font_size" />
+
+    <ImageView
+        android:id="@+id/textView1"
+        android:layout_width="30dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/comment"
+        android:gravity="right" />-->
+
+</RelativeLayout>

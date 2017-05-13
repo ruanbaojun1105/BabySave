@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:id="@+id/communityactionbar_touch"
+    android:visibility="visible"
+    android:paddingLeft="@dimen/middle_spacing"
+    android:background="@color/maincolortheme_color"
+    >
+
+    <RelativeLayout
+        android:id="@+id/zhoubian"
+        android:layout_width="43dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/dongtai"
+        android:layout_toRightOf="@+id/dongtai"
+        android:layout_toEndOf="@+id/dongtai"
+        android:layout_marginLeft="10dp"
+        >
+        <TextView
+            android:id="@+id/dot1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/badge_bg_yellow_radiu"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/xsmall_font_size"
+            android:textStyle="bold"
+            android:maxWidth="25dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:id="@+id/zhoubian_lin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/zhoubian_tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="周边"
+                android:gravity="center"
+                android:textSize="@dimen/middle_font_size"
+                android:textColor="@color/textcolor_home" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dongtai"
+        android:layout_width="43dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ball_red"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/dongtai_lin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/dongtai_tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="主页"
+                android:gravity="center"
+                android:textSize="@dimen/middle_font_size"
+                android:textColor="@color/textcolor_home" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_menu"
+        android:layout_width="45dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/common_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/add_tag"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/dongtai"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+        android:id="@+id/dongtai_icon"
+        android:layout_width="42dp"
+        android:layout_height="2dp"
+        android:background="@drawable/home_text_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/zhoubian"
+        android:layout_marginBottom="7dp"
+        android:layout_alignLeft="@+id/zhoubian"
+        android:layout_alignStart="@+id/zhoubian">
+        <TextView
+        android:id="@+id/zhoubian_icon"
+        android:layout_width="42dp"
+        android:layout_height="2dp"
+        android:background="@drawable/home_text_bg"
+         />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" >
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/user_scrollView"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:id="@+id/person_page_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                android:clickable="true" />
+
+            <FrameLayout
+                android:id="@+id/person_page_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_page_message"
+                android:layout_marginTop="@dimen/common_margin"
+                android:clickable="true" />
+
+            <FrameLayout
+                android:id="@+id/person_page_topic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_page_place"
+                android:layout_marginTop="@dimen/common_margin"
+                android:clickable="true" />
+
+            <FrameLayout
+                android:id="@+id/person_page_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_page_topic"
+                android:layout_marginTop="@dimen/common_margin"
+                android:clickable="true" />
+            <FrameLayout
+                android:id="@+id/person_page_praise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_page_activity"
+                android:layout_marginTop="@dimen/common_margin"
+                android:clickable="true">
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/person_page_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_page_praise"
+                android:clickable="true"
+                />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/progressbar_width"
+                android:layout_height="@dimen/progressbar_height"
+                android:layout_below="@+id/person_page_reply"
+                android:layout_centerHorizontal="true"
+                android:indeterminateDrawable="@drawable/frame_loading" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

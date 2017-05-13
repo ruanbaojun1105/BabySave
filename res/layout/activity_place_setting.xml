@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_margin="@dimen/small_margin"
+        style="@null"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_bg"
+        android:hint="搜索" />
+	
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_errortext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="输入的地点不存在"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_place_setting_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_place_setting_search_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <mybaby.ui.widget.RefreshListView
+            android:id="@+id/lv_place_setting_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </FrameLayout>
+    
+    <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="@dimen/progressbar_width"
+            android:layout_height="@dimen/progressbar_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminateDrawable="@drawable/frame_loading"
+            android:indeterminateDuration="2100"
+            />
+</RelativeLayout>
+    <ListView
+        android:id="@+id/lv_place_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+</LinearLayout>

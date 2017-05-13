@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:id="@+id/image_rela"
+    >
+
+    <mybaby.ui.community.customclass.NineGridlayout
+        android:id="@+id/iv_ngrid_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_rect_blackbg"
+            android:id="@+id/image_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            >
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/image_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:text="{fa-image}"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                />
+            <!--<TextView
+                android:id="@+id/image_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:text="@string/fa_image"
+                android:textColor="@color/white"
+                android:textSize="10sp" />-->
+
+            <TextView
+                android:id="@+id/image_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+
+</RelativeLayout>

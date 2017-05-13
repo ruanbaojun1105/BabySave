@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/addImage_rela">
+     <LinearLayout 
+         android:id="@+id/photo_header_badge"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+	     android:layout_alignParentTop="true"
+         android:paddingLeft="@dimen/small_margin"
+         android:paddingBottom="@dimen/small_margin">
+	     <TextView
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:background="@drawable/compose_photo_delete" />
+     </LinearLayout>
+     <FrameLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:id="@+id/imgframe_media"
+          >
+     </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:alpha="0.8"
+    android:layout_width="match_parent"
+    android:id="@+id/touch_bar_main"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/touch_bar"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/tribe_touchbar_selector"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <mybaby.ui.widget.RoundImageViewByXfermode
+            android:id="@+id/touch_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/touch_text"
+            android:textColor="@color/tribe_touch_color"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
+</RelativeLayout>

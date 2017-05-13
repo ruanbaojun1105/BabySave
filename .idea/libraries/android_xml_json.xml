@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android-xml-json">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/android-xml-json.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

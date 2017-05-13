@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/community_driver_gray"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+         >
+
+        <LinearLayout
+            android:id="@+id/layout_Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txtHeadTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉可以刷新..."
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtLastRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无更新记录"
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+             >
+
+            <ImageView
+                android:id="@+id/imgRefreshArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/arrow_height"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/arrow" />
+            <ProgressBar
+                android:id="@+id/pbRefreshRound"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="@dimen/progressbar_width"
+                android:layout_height="@dimen/progressbar_height"
+                android:indeterminateDrawable="@drawable/frame_loading"
+                android:visibility="gone" 
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

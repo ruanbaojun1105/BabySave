@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/large_spacing"
+        android:paddingLeft="@dimen/x_large_spacing"
+        android:paddingRight="@dimen/x_large_spacing" >
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:background="@drawable/maincolortheme_edit_text_holo_light"
+             />
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_email"
+            android:layout_marginBottom="@dimen/middle_spacing"
+            android:layout_marginTop="@dimen/middle_spacing"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:singleLine="true" 
+            android:background="@drawable/maincolortheme_edit_text_holo_light"
+            />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/txt_password"
+            android:background="@drawable/btn_sign_style"
+            android:textSize="@dimen/common_font_size"
+            android:textColor="@color/white" />
+        <Button 
+            android:id="@+id/btn_getBack"
+            android:layout_width="wrap_content"
+             android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/txt_password"
+            android:textSize="@dimen/common_font_size"
+            android:text="忘记密码"
+            android:textColor="@color/mainThemeColor" 
+            android:visibility="visible"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/friend_row"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_selector_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/small_spacing"
+    android:paddingLeft="@dimen/large_spacing"
+    android:paddingRight="@dimen/large_spacing"
+    android:paddingTop="@dimen/small_spacing" >
+
+    <FrameLayout
+        android:id="@+id/friend_image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/friend_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_spacing"
+        android:textColor="@color/black"
+        android:textSize="@dimen/middle_font_size" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/friend_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/badge_bg_red"
+            android:gravity="center"
+            android:minWidth="17dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_font_size"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>

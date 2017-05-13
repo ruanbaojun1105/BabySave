@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_topic_edit"
+        android:icon="@drawable/ic_action_accept"
+        android:showAsAction="always"
+        android:title="编辑"/>
+    <item
+        android:id="@+id/menu_topic_delect"
+        android:icon="@drawable/ic_action_cancel"
+        android:showAsAction="always"
+        android:title="删除"/>
+
+</menu>

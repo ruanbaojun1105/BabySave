@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/notiufication_summary_height" >
+
+    <RelativeLayout
+        android:id="@+id/rl_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/notiufication_summary_height" >
+
+        <mybaby.ui.widget.RoundImageViewByXfermode
+            android:layout_width="@dimen/notification_image_width"
+            android:layout_height="@dimen/notification_image_height"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:src="@drawable/neighborhoods_3x" />
+
+        <TextView
+            android:id="@+id/summary_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginLeft="50dip"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@drawable/badge_bg_red"
+            android:gravity="center"
+            android:minWidth="17dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_font_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_nearby_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toLeftOf="@+id/tv_enter"
+        android:layout_toRightOf="@+id/rl_icon"
+        android:textColor="@color/black"
+        android:textSize="@dimen/middle_font_size" />
+
+    <TextView
+        android:id="@+id/tv_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/common_margin"
+        android:text="@string/fa_angle_right"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/large_font_size" />
+
+</RelativeLayout>

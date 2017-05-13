@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/x_large_spacing"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/middle_font_size" 
+        android:text="@string/my_phone_number"
+        android:textColor="@color/gray"/>
+    
+        <LinearLayout 
+            android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="@dimen/small_spacing"
+		    android:orientation="horizontal">
+	        <EditText
+	            android:id="@+id/txt_country_code"
+	            android:layout_weight="1"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:minHeight="40dp"
+	            android:inputType="phone"
+	            android:gravity="right"
+	            android:singleLine="true"
+	            android:imeOptions="actionNext"
+	            android:textSize="@dimen/large_font_size"/>        
+	        <EditText
+	            android:id="@+id/txt_phone_number"
+	            android:layout_weight="3"
+	            android:layout_width="0dp"	            
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="@dimen/common_spacing"
+	            android:inputType="phone"
+	            android:singleLine="true"
+	            android:imeOptions="actionDone"
+	            android:textSize="@dimen/large_font_size"  />
+	</LinearLayout>
+</LinearLayout>

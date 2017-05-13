@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Action bar background -->
+    <item name="actionbar_bg" type="drawable">@color/actionbar_bg</item>
+    <item name="transparent_home_bg" type="drawable">@color/transparent</item>
+    <item name="mainThemeColor_home_bg" type="drawable">@color/mainThemeColor</item>
+</resources>

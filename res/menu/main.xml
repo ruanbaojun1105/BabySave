@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_write"
+        android:icon="@drawable/edit_tag"
+        android:showAsAction="always|withText"
+        android:title="日记"/>
+    <item
+            android:id="@+id/community_edit"
+            android:showAsAction="always|withText"
+            android:icon="@drawable/add_tag"
+            android:actionProviderClass="mybaby.ui.community.customclass.CustomActionProvider"
+            android:title="发帖"
+            />
+</menu>

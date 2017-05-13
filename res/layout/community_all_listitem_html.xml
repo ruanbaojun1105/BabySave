@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <include
+        layout="@layout/activity_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/line_bg"
+        />
+    <mybaby.ui.widget.CusWebView
+        android:id="@+id/activity_webview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:alwaysDrawnWithCache="false"
+        android:persistentDrawingCache="none"
+        />
+    <include
+        layout="@layout/activity_line"
+        />
+    <include layout="@layout/activity_driver" />
+</LinearLayout>

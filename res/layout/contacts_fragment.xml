@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/community_driver_gray" >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/to_see_follow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/item_press"
+            android:clickable="true" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:textSize="@dimen/middle_font_size"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/to_see_follow_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="@string/fa_angle_right"
+                android:layout_marginRight="@dimen/common_margin"
+                android:textSize="@dimen/large_font_size"
+                android:textColor="@color/gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_height="@dimen/line_height"
+            android:layout_width="wrap_content"
+            android:background="@drawable/line"/>
+
+        <RelativeLayout
+            android:id="@+id/to_see_fance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/item_press"
+            android:clickable="true" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粉丝"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:textSize="@dimen/middle_font_size"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/to_see_fance_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="@string/fa_angle_right"
+                android:layout_marginRight="@dimen/common_margin"
+                android:textSize="@dimen/large_font_size"
+                android:textColor="@color/gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_height="@dimen/line_height"
+            android:layout_width="wrap_content"
+            android:background="@drawable/line"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dip"
+    android:background="@drawable/item_press" >
+
+    <mybaby.ui.widget.CircleImageView
+        android:id="@+id/iv_avater"
+        android:layout_width="@dimen/person_page_user_image_width"
+        android:layout_height="@dimen/person_page_user_image_height"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:src="@drawable/avatar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_toLeftOf="@+id/tv_hasFollow"
+        android:layout_toRightOf="@id/iv_avater"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle_font_size" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/small_font_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_hasFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/common_font_size" />
+    <include layout="@layout/activity_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_1"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

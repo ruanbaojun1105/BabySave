@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/photo_view"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ll_photoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_photoenter"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_photoenter"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fa_angle_right"
+            android:textSize="@dimen/large_font_size"
+            android:textColor="@color/gray_1"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/wx_chat_container"
+        android:layout_below="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/touch_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/tab_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_bg_red_radiu"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/xsmall_font_size"
+            android:textStyle="bold"
+            android:maxWidth="30dp"
+            android:layout_marginLeft="-5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/touch_bar_tv"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/touch_bar_tv"
+            android:layout_width="95dp"
+            android:layout_height="34dp"
+            android:background="@drawable/group_activity"
+            />
+    </RelativeLayout>
+
+    <!--<include
+        layout="@layout/icontouch_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />-->
+    <include
+        layout="@layout/iconedit_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        />
+    <ProgressBar
+        android:id="@+id/progress_tribe"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="@dimen/progressbar_width"
+        android:layout_height="@dimen/progressbar_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/frame_loading"
+        android:visibility="gone" />
+</RelativeLayout>

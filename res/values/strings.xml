@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<string name="app_name">辣妈说</string><!--辣妈说-怀孕育儿必备,妈妈孕期产后减肥大姨妈月经百科知识,宝宝辅食胎教儿歌故事取名字起名大全-->
+		<string name="app_name_over">辣妈说</string>
+         <!-- SD Card errors -->
+    	<string translatable="false" name="sdcard_title">SD Card Required</string>
+    	<string translatable="false" name="sdcard_message">A mounted SD card is required to upload media.</string>
+            
+    	<!-- 从ios转过来的 要注意修改%s %d 为 %1$s %2$s ... -->				    
+		<string name="init_post_birthday">这一天%1$s%2$s了，记下那天的快乐时光...</string>
+		<string name="init_post_ultrasound">十月怀胎，在这里给这段人生的奇妙旅程留下点痕迹...</string>
+
+		
+		<string name="init_post_born">这一天%1$s出生了，还记得那个痛苦和激动的时刻吗...</string>
+		<string name="age_year_words">1岁|%1$d岁</string>
+		<string name="age_month_words">1个月|%1$d个月</string>
+		<string name="age_day_words">1天|%1$d天</string>
+		<string name="age_week_words">1周|%1$d周</string>
+		<string name="age_text_1">%1$s</string>
+		<string name="age_text_2">%1$s%2$s</string>
+		<string name="age_text_3">%1$s%2$s%3$s</string>
+		<string name="age_text_pregnant_1">孕%1$s</string>
+		<string name="age_text_pregnant_2">孕%1$s+%2$s</string>
+		<string name="vip_1_year">1年</string>
+		<string name="vip_3_years">3年</string>
+		<string name="vip_3_months">季度</string>
+		<string name="nickname_of_baby">宝宝的昵称</string>
+		<string name="birthday_due_date">生日/预产期</string>
+		<string name="cancel">取消</string>
+		<string name="choose_from_photos">从相册选择</string>
+		<string name="confirm_delete">确认删除？</string>
+		<string name="confirm_password">确认密码</string>
+		<string name="confirm_password_is_required">确认密码是必填的。</string>
+		<string name="delete">删除</string>
+		<string name="community">社区</string>
+		<string name="close">不记</string>
+		<string name="done">完成</string>
+		<string name="ok">确定</string>
+		<string name="draft">草稿</string>
+		<string name="email_cannot_be_registered_repeatedly">E-mail不能重复注册。</string>
+		<string name="edit">编辑</string>
+		<string name="email">手机号/E-mail</string>
+		<string name="email_is_required">E-mail必须填写。</string>
+		<string name="error">错误</string>
+		<string name="failed">失败</string>
+		<string name="image">图片</string>
+		<string name="invalid_email_address">E-mail/手机号格式不正确</string>
+		<string name="local">本地</string>
+		<string name="modify">修改</string>
+		<string name="my_baby_record_happiness">辣妈说 - 80/90辣妈聚集地</string>
+		<string name="no">否</string>
+		<string name="no_connection">无连接</string>
+		<string name="password">密码</string>
+		<string name="password_is_required">密码必须填写。</string>
+		<string name="passwords_do_not_match">密码不匹配。</string>
+		<string name="pending">待审</string>
+		<string name="pending_moderation">等待审核</string>
+		<string name="pending_review">等待复审</string>
+		<string name="please_confirm_the_email">请确认邮箱和密码准确无误，注册后不可修改。</string>
+		<string name="please_fill_out_all_the_fields">请填写所有内容</string>
+		
+		
+		
+		
+		<string name="retry">重试?</string>
+		<string name="save">保存</string>
+		<string name="share">分享</string>
+		<string name="share_app">告诉朋友们</string>
+		<string name="evaluate_app">好评－鼓励一下</string>
+		<string name="feedback">反馈</string>
+		<string name="sign_in">登录</string>
+		<string name="sign_up">注册</string>
+		<string name="sign_up_now">马上注册</string>
+		<string name="sign_up_success">注册成功。</string>
+		<string name="users_can_log">为确保您的数据安全可靠，请及时注册。</string>
+		<string name="store">商店</string>
+		<string name="take_photo">拍照</string>
+		<string name="the_app_cannot_recognize_the_server_response">App 无法识别服务器的回应。</string>
+		<string name="the_budding_of_a_new_life">这一天，新生命的种子开始萌芽，或许你要数周后才会知道，说说你那时的心情...</string>
+		<string name="the_internet_connection_appears_to_be_offline">未连接网络。</string>
+		<string name="today">今天</string>
+		<string name="uploaded">已上传</string>
+		<string name="uploading">正在上传</string>
+		<string name="user_example_com">xxx@abc.com</string>
+		<string name="video">视频</string>
+		<string name="write_something">写点什么吧...</string>
+		<string name="yes">是</string>
+		<string name="every_record_supports_9_photos_at_most">每条记录最多支持9张照片</string>
+		<string name="albums">相册</string>
+		<string name="pick_photo">选择照片</string>
+		<string name="pick_photos">选择照片</string>
+		<string name="pull_down_to_refresh">向下拉动以刷新...</string>
+		<string name="release_to_refresh">松开可以刷新...</string>
+		<string name="update_available">更新可用</string>
+		<string name="a_new_version_of_my_baby_is_now_available">辣妈说 for Android 有一个新版本现在可用</string>
+		<string name="update_now">现在更新</string>
+		<string name="vip_1_month">1个月</string>
+		<string name="be_pregnant">期待宝宝</string>
+		<string name="book">相册</string>
+		<string name="books">相册</string>
+		<string name="buy">购买</string>
+		<string name="cover">封面</string>
+		<string name="date">日期</string>
+		<string name="every_day">每一天</string>
+		<string name="mom_and_dad">记下和爸爸一起走过的那些幸福时光吧...</string>
+		<string name="free">免费</string>
+		<string name="home">主页</string>
+		<string name="photo">照片</string>
+		<string name="photos">照片</string>
+		<string name="more">更多</string>
+		<string name="remove">移除</string>
+		<string name="theme">主题</string>
+		<string name="themes">主题</string>
+		<string name="title">标题</string>
+		<string name="write">日记</string>
+		<string name="add_a_cover">添加封面</string>
+		<string name="change_cover">更换封面</string>
+		<string name="add_photo">添加照片</string>
+		<string name="write_a_review">评论</string>
+		<string name="baby">宝宝</string>
+		<string name="babies">宝宝</string>
+		<string name="photo_book">照片书</string>
+		<string name="photo_books">照片书</string>
+		<string name="tag">标签</string>
+		<string name="tags">标签</string>
+		<string name="person">人</string>
+		<string name="persons">人</string>
+		<string name="dad">爸爸</string>
+		<string name="mom">妈妈</string>
+		<string name="name">名字</string>
+		<string name="important">重要</string>
+		<string name="pet">宠物</string>
+		<string name="travel">旅行</string>
+		<string name="show_all">显示全部</string>
+		<string name="browse">浏览</string>
+		<string name="add">添加</string>
+		<string name="choose_from_home">从主页选择</string>
+		<string name="settings">设置</string>
+		<string name="accept">接受</string>
+		<string name="activity">动态</string>
+		<string name="add_friend">加好友</string>
+		<string name="already_send_request">已发送好友请求</string>
+		<string name="cancel_friendship">取消好友关系</string>
+		<string name="comment">评论</string>
+		<string name="contacts">通讯录</string>
+		<string name="facebook_friend">Facebook 好友</string>
+		<string name="facebook_friends">Facebook 好友</string>
+		<string name="find_by">查找</string>
+		<string name="find_friends">查找好友</string>
+		<string name="forbidden_access">禁止访问</string>
+		<string name="friend_of_friend">好友的好友</string>
+		<string name="friends">好友</string>
+		<string name="friendship_requested">已发送好友请求</string>
+		<string name="friendship_requests">好友请求</string>
+		<string name="hi_xxx">你好 %1$s</string>
+		<string name="invite">邀请</string>
+		<string name="invite_friends">邀请好友</string>
+		<string name="me">我</string>
+		<string name="i_am">我是: </string>
+		<string name="mentions">与我相关</string>
+		<string name="my_name">我的姓名</string>
+		<string name="my_phone_number">我的手机号码</string>
+		<string name="next">下一步</string>
+		<string name="not_found">没有找到</string>
+		<string name="phone_number">手机号码</string>
+		<string name="please_confirm_the_phone_number">请确认手机号码.</string>
+		<string name="privacy_private">私密</string>
+		<string name="recommended_friends">推荐好友</string>
+		<string name="record_and_share_baby_accompanies_your_every_happy_moment">留住宝宝成长的每一个美好瞬间。现在支持多个手机平台，立刻下载：</string>
+		<string name="reply">回复</string>
+		<string name="message">信息</string>
+		<string name="copy">复制</string>
+		<string name="invalid_phone_number">错误的电话号码</string>
+		<string name="my_family">家人</string>
+		<string name="invite_to_xxx">邀请加入 %1$s</string>
+		<string name="did_you_take_any_photos">你拍过什么照片吗？</string>
+		<string name="successfully_added_a_friend_you_can_get_free">成功添加一个好友，即可获取免费。</string>
+
+		<string name="open_friends_description">●马上邀请家人和朋友，可以和他们分享内容，同时也能关注好友的宝宝。\n●『辣妈说』现在支持多个手机平台。</string>
+    
+
+	<string name="notification_message_check">查看</string>
+	<string name="morefragment_person_page">个人主页</string>
+	<string name="morefragment_share">告诉朋友们</string>
+	<string name="morefragment_feedback">帮助与反馈</string>
+	<string name="morefragment_push">消息提醒</string>
+	<string name="morefragment_signup">注册</string>
+	 
+
+	<string name="suredislike">确认不感兴趣则不会再看到该用户的所有信息</string>
+	 
+
+	<string name="delect">删除</string>
+	 
+
+	<string name="okdelect">删除成功</string>
+	 
+
+	<string name="baddelect">删除失败</string>
+	 
+
+	 
+
+	<string name="suredelect">确定删除吗？</string>
+	 
+
+	<string name="disde">日记分享内容不能在这里删除，如果需要，请删除对应的日记即可</string>
+	 
+
+	<string name="yufangz">#打预防针</string>
+	 
+
+	<string name="saysay">说一说你家宝宝打预防针发生的趣事</string>
+	 
+
+	<string name="nowcome">马上参与</string>
+	 
+
+	<string name="invail">邀请好友</string>
+	 
+
+	<string name="gerenhuatiliebiao">个人话题列表</string>
+	 
+
+	<string name="wodegerenzhuye">我的个人主页</string>
+	 
+
+	<string name="yonghugerenzhuye">用户个人主页</string>
+	 
+
+	<string name="didiandongtailiebiao">地点动态列表</string>
+	 
+
+	<string name="tiezizanliebiao">帖子赞列表</string>
+	 
+
+	<string name="tiezixiangqing">帖子详情</string>
+	 
+
+	<string name="didianxuanze">地点选择</string>
+	 
+
+	<string name="zhudongtailiebiao">主动态列表</string>
+	 
+
+	<string name="zhoubiandongtailiebiao">周边动态列表</string>
+	 
+
+	<string name="rijigerenliebiao">日记个人列表</string>
+	 
+
+	<string name="rijizhuliebiao">日记主列表</string>
+	 
+
+	<string name="zhaopianliulan">照片浏览</string>
+	 
+
+	<string name="zhaopianweihu">照片维护</string>
+	 
+
+	<string name="xiaoxizhuliebiao">消息主列表</string>
+	 
+
+	<string name="gerendongtailiebiao">个人动态列表</string>
+	 
+
+	<string name="haoyoudongtailiebiao">好友动态列表</string>
+	 
+
+	<string name="tixingshezhi">提醒设置</string>
+	 
+
+	<string name="zaianyici">再按一次退出程序</string>
+	 
+
+	<string name="xinyonghu">新用户</string>
+	 
+
+	<string name="jiarenxinxiweihu">家人信息维护</string>
+	 
+
+	<string name="defaultNearbyName">查找和你同一小区的妈妈</string>
+	 
+
+	<string name="followaza">+ 关注</string>
+	 
+
+	<string name="follow">关注</string>
+	 
+
+	<string name="pleaseinput">请输入手机号码</string>
+	 
+
+	<string name="inputsms">请输入验证码</string>
+	<string name="MPraise">我赞过</string>
+	<string name="MReply">我回复过</string>
+	<string name="TribeMember">群成员列表</string>
+	<string name="Notification">消息免打扰</string>
+	<string name="exitFromTribe">删除并退出</string>
+	<string name="please_in">请填写宝贝性别</string>
+	<string name="neterror">当前网络异常！</string>
+	<string name="loadings">载入中...</string>
+	<string name="inerror">载入失败，请重试！</string>
+	<string name="loadok">数据配置完成</string>
+	<string name="net">网络加载异常</string>
+	<string name="entertip">指定的方法为空，无法调起！</string>
+
+	<string name="photos_num">%1$d张</string>
+	<string name="msg_no_camera">没找到摄像头</string>
+	<string name="msg_maxi_capacity">已达到照片选择上限</string>
+	<string name="commit">确定</string>
+	<string name="commit_num">确定(%1$d/%2$d)</string>
+	<string name="finish">完成</string>
+	<string name="pleasekill">数据库配置项异常,请重新安装程序！</string>
+
+
+</resources>

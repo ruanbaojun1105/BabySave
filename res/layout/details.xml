@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/community_driver_gray"
+     >
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:id="@+id/toolbar"
+        />
+    <RelativeLayout
+        android:id="@+id/more_topic_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/item_press"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        >
+
+        <mybaby.ui.community.customclass.CustomLinkTextView
+            android:id="@+id/more_topic_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle_font_size"
+            android:padding="@dimen/padding_width_small"
+            android:layout_toLeftOf="@+id/tag"
+            android:layout_toStartOf="@+id/tag" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tag"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:paddingRight="@dimen/padding_width_small"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <include layout="@layout/activity_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/more_topic_text" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/comments_lin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <include layout="@layout/activity_line"/>
+        <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+         >
+
+        <EditText
+            android:id="@+id/edit_topic_reply"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/add_topic_reply"
+            android:layout_toRightOf="@+id/comment_tag"
+            android:textColorHighlight="@color/gray_1"
+            android:maxLength="@integer/text_maxlength"
+            android:maxLines="4"
+            android:textSize="@dimen/middle_font_size"
+            android:ems="10"
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/gray"
+            android:background="@drawable/edittext_bg"
+            style="@null"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            />
+
+        <Button
+            android:id="@+id/add_topic_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_topic_reply"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:layout_alignTop="@+id/edit_topic_reply"
+            android:paddingLeft="@dimen/small_spacing"
+            android:paddingRight="@dimen/small_spacing"
+            android:minHeight="50dp"
+            android:text="发送"
+            android:textColor="@color/mainThemeColor"     
+			android:textSize="@dimen/middle_font_size" 
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/comment_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_topic_reply"
+            android:layout_alignTop="@+id/edit_topic_reply"
+            android:text="评论" 
+            android:gravity="center_vertical"
+			android:textColor="@color/gray"     
+			android:textSize="@dimen/middle_font_size" 
+			android:paddingLeft="@dimen/small_spacing"    
+			android:paddingRight="@dimen/small_spacing"    
+            />
+
+    </RelativeLayout>
+
+      
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/comments_lin"
+        android:id="@+id/content_page"
+        android:layout_below="@+id/more_topic_rela"></FrameLayout>
+
+</RelativeLayout>
