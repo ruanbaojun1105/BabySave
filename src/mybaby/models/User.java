@@ -248,7 +248,7 @@ public class User  implements Serializable {
 	}
 
 	
-	//huweibing 2015-07-12 增加  本地数据库中没有这些内容
+	// 2015-07-12 增加  本地数据库中没有这些内容
 	private long babyBirthday;
 	private int followCount;
 	private int followerCount;
