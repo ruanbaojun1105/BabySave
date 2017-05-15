@@ -93,7 +93,7 @@ public class Blog {
 		return this.username != null && this.username.length() > 0;
 	}
 	
-	//周边的距离，单位：米  huweibing 2015-07-17
+	//周边的距离，单位：米   2015-07-17
 	public static int getNearbyDistance(){
 		return  MyBabyApp.getSharedPreferences().getInt("nearbyDistance",3500);
 	}
