@@ -294,7 +294,7 @@ public class XMLRPCClientTest {
     @SuppressWarnings("unchecked")
     private Object callXMLRPC(final String method, Object[] params, File file) throws XMLRPCException {
         try {
-            //huweibing 2014-12-11 增加锁，避免错误 Invalid use of SingleClientConnManager: connection still allocated. 
+            //  2014-12-11 增加锁，避免错误 Invalid use of SingleClientConnManager: connection still allocated.
             //synchronized (client) {
 	            // prepare POST body
 	            if (method.equals("wp.uploadFile")){

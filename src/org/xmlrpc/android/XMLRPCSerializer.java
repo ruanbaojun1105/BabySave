@@ -71,7 +71,7 @@ class XMLRPCSerializer {
         if (object instanceof Date || object instanceof Calendar) {
             Date date = (Date) object;
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd'T'HH:mm:ss");
-           // dateFormat.setCalendar(cal);    huweibing 2014-12-13 不要根据时区转换时间，由使用的地方自己去转换
+           // dateFormat.setCalendar(cal);      2014-12-13 不要根据时区转换时间，由使用的地方自己去转换
             String sDate = dateFormat.format(date);
             serializer.startTag(null, TYPE_DATE_TIME_ISO8601).text(sDate).endTag(null, TYPE_DATE_TIME_ISO8601);
         } else
@@ -175,7 +175,7 @@ class XMLRPCSerializer {
         if (object instanceof Date || object instanceof Calendar) {
             Date date = (Date) object;
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd'T'HH:mm:ss");
-           // dateFormat.setCalendar(cal);    huweibing 2014-12-13 不要根据时区转换时间，由使用的地方自己去转换
+           // dateFormat.setCalendar(cal);      2014-12-13 不要根据时区转换时间，由使用的地方自己去转换
             String sDate = dateFormat.format(date);
             serializer+=getStartTag(TYPE_DATE_TIME_ISO8601)+sDate+getEndTag(TYPE_DATE_TIME_ISO8601);
         } else
@@ -281,7 +281,7 @@ class XMLRPCSerializer {
             obj = parser.nextText();
         } else
         if (typeNodeName.equals(TYPE_DATE_TIME_ISO8601)) {
-           // dateFormat.setCalendar(cal);  huweibing 2014-12-13 不要根据时区转换时间，由使用的地方自己去转换
+           // dateFormat.setCalendar(cal);    2014-12-13 不要根据时区转换时间，由使用的地方自己去转换
             String value = parser.nextText();
             try {
                 obj = dateFormat.parseObject(value);

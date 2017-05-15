@@ -105,7 +105,7 @@ public class PostRPC extends BaseRPC {
 			post.setGuid(MapUtils.getMapStr(postMap, "title"));
 			post.setStatus(MapUtils.getMapStr(postMap, "post_status"));
 	    	
-			//增加place处理 huweibing 2015-07-17
+			//增加place处理   2015-07-17
 			Map<?, ?> mapPlace = MapUtils.getMap(postMap,"place");
 			if(mapPlace != null){
 				Place place=Place.createByMap(mapPlace);
@@ -169,7 +169,7 @@ public class PostRPC extends BaseRPC {
 		}
 		
 		
-		//增加placeId处理 huweibing 2015-07-17
+		//增加placeId处理   2015-07-17
 		public static boolean uploadPost(final Post post){
 			if(post.getRemoteSyncFlag()==Post.remoteSync.SyncSuccess.ordinal()
 					|| post.getIsLocalDeleted()){
@@ -230,7 +230,7 @@ public class PostRPC extends BaseRPC {
 				}
 			}
 		    
-			//增加place处理 huweibing 2015-07-17
+			//增加place处理   2015-07-17
 			if(post.getPlaceObjId()>0){
 				Place place=PlaceRepository.load(post.getPlaceObjId());
 				contentStruct.put("place", place.getMap());

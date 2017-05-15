@@ -68,7 +68,7 @@ public class MediaRPC extends BaseRPC {
 			}
 		    
 	    
-	    //huweibing 2015-07-20 增加处理parentId
+	    //  2015-07-20 增加处理parentId
 	    int bz_postid=0;
 	    if (post!=null) {
 	    	bz_postid=post.getPostid();
